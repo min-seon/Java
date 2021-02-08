@@ -1,0 +1,59 @@
+
+import java.util.Scanner;
+
+public class main5 {
+	/*
+	 * # 최대값 구하기
+	 * 1. 가장 큰 값을 찾아 입력한다.
+	 * 2. 정답이면 해당 값을 0으로 변경한다.
+	 * 3. arr배열의 모든 값이 0으로 변경되면 프로그램은 종료된다.
+	 * 예)
+	 * 11, 87, 42, 100, 24
+	 * 입력 : 100
+	 * 
+	 * 11, 87, 42, 0, 24
+	 * 입력 : 87
+	 * 
+	 * 11, 0, 42, 0, 24
+	 */
+	public static void main(String[] args) {
+		
+		int[] arr = {11, 87, 42, 100, 24};
+		Scanner scan=new Scanner(System.in);
+		
+		
+		int k=0;
+		
+		while(true) {
+			
+		int bignum=0;
+		int index=0;
+		//제일 큰 수 찾기
+		for(int i=0; i<5;i++) {  //숫자출력
+				System.out.print(arr[i] + " ");
+			}
+		
+		
+		for(int i=0; i<5;i++) { 
+      		     if(bignum< arr[i]) {
+		    	 bignum=arr[i];
+		    	 index=i;	    	 
+		    	}		     
+		}
+		
+		System.out.println("입력 : ");
+		int num=scan.nextInt();
+		
+		if( num== bignum) {
+			arr[index]=0;
+			k+=1;
+		}
+		
+		if(k==5) break;
+		
+		
+		 
+		
+	}
+	}
+}
