@@ -1,0 +1,30 @@
+
+public class main10 {
+	public static void main(String[] args) {
+         //올림차순으로 정렬
+		int[] score = {10, 50, 30, 40, 80, 7};
+		
+		for(int i=0;i<score.length;i++) {
+			int min=score[i];
+			int minIdx=i;
+			for(int k=i;k<score.length;k++) {
+				if(min>score[k]) {
+					min=score[k];
+					minIdx=k;
+				}
+			}
+			
+			int temp=score[i];
+			score[i]=min;
+			score[minIdx]=temp;
+			
+			
+			for(int k=0;k<score.length;k++) {
+				System.out.print(score[k]+ " ");
+				
+			}
+			System.out.println();
+		}
+		
+}
+}
