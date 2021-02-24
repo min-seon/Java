@@ -1,0 +1,47 @@
+
+import java.util.Random;
+
+public class main11 {
+	/*
+	 * # 중복숫자 금지[2단계] 
+	 * 1. arr배열에 1~10 사이의 랜덤 숫자 5개를 저장한다. 
+	 * 2. 단 중복되는 숫자가 없어야 한다.
+	 */
+
+	public static void main(String[] args) {
+
+		Random ran = new Random();
+		int[] arr = new int[5];
+
+		int index =1; 
+		
+		arr[0]=ran.nextInt(10) + 1;
+		
+		for(int k=1; k<arr.length;) {
+			int check= 0;
+		int r = ran.nextInt(9) + 1;
+		
+		//중복값 확인하기
+		for(int i=0;i<index;i++) {
+			if(arr[i] != r) {		 
+			  check+=1;
+			}
+		}
+		
+		//중복 아닌 값 넣어주기
+		if(check==index) { 
+			arr[index]=r;
+			index+=1;
+			k++;
+		}
+		  
+		//출력
+		}
+		for(int j=0; j<arr.length;j++) {
+			System.out.print(arr[j]+ " ");
+		}
+		System.out.println();
+ 
+
+	}
+}
