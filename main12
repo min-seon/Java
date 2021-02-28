@@ -1,0 +1,31 @@
+
+public class main1 {
+	public static void main(String[] args) {
+
+		String jumin = "890101-2012932";
+		// 문제 1) 나이 출력
+		// 정답 1) 30세
+		String age = jumin.substring(0, 2);
+		System.out.println(age);
+		int reage = Integer.parseInt(age);
+
+		if (reage <= 21) {
+			reage = 21 - reage + 1;
+			System.out.println(reage);
+		} else {
+
+			reage = 121 - reage + 1;
+			System.out.println(reage);
+		}
+		// 문제 2) 성별 출력
+		// 정답 2) 여성
+		
+		char rs=jumin.charAt(7);
+		int sex=(int)rs;
+		
+		if(sex==1 && sex==3) {System.out.println("남자");}
+		else System.out.println("여자");
+
+	}
+
+}
